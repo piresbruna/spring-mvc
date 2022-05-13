@@ -2,3 +2,10 @@
 Prática do framework Spring com o padrão Model-View-Controller
 
 **Reprodução do [Curso Básico Spring MVC](https://www.youtube.com/playlist?list=PL3ZslI15yo2ppY0GsRFDjRdHZAUuPnQ6M)**
+
+## Commits seguindo os vídeos
+
+- **Commit 1:** Vídeos 1 e 2;
+- **Commit 2:** Vídeos 3;
+- **Commit 3:** Vídeos 4;
+- **Commit 4:** Vídeos 5, 6 e 7;
