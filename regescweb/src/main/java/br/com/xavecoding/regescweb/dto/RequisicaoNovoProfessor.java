@@ -1,30 +1,17 @@
-package br.com.xavecoding.regescweb.models;
+package br.com.xavecoding.regescweb.dto;
 
-import org.springframework.lang.Nullable;
+import br.com.xavecoding.regescweb.models.Professor;
+import br.com.xavecoding.regescweb.models.StatusProfessor;
 
-import javax.persistence.*;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import java.math.BigDecimal;
 
-@Entity
-public class Professor {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(nullable=false)
+//Classe DTO - Data Transfer Object
+public class RequisicaoNovoProfessor {
     private String nome;
     private BigDecimal salario;
-    @Enumerated(EnumType.STRING)
     private StatusProfessor statusProfessor;
-
-    public Professor(){  }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNome() {
         return nome;
@@ -50,11 +37,17 @@ public class Professor {
         this.statusProfessor = statusProfessor;
     }
 
+    public Professor toProfessor(){
+        Professor professor = new Professor();
+        professor.setNome(this.nome);
+        professor.setSalario(this.salario);
+        professor.setStatusProfessor(this.statusProfessor);
+        return professor;
+    }
     @Override
     public String toString() {
-        return "Professor{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
+        return "RequisicaoNovoProfessor{" +
+                "nome='" + nome + '\'' +
                 ", salario=" + salario +
                 ", statusProfessor=" + statusProfessor +
                 '}';

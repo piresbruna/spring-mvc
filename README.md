@@ -5,7 +5,8 @@ Prática do framework Spring com o padrão Model-View-Controller
 
 ## Commits seguindo os vídeos
 
-- **Commit 1:** Vídeos 1 e 2;
-- **Commit 2:** Vídeos 3;
-- **Commit 3:** Vídeos 4;
-- **Commit 4:** Vídeos 5, 6 e 7;
+- **Commit 2:** Vídeos 1 e 2;
+- **Commit 3:** Vídeos 3;
+- **Commit 4:** Vídeos 4;
+- **Commit 5:** Vídeos 5, 6 e 7;
+- **Commit 6:** Vídeos 8, 9 e 10;
