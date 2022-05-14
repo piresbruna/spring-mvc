@@ -16,25 +16,25 @@
         <h1>Novo Professor</h1>
     </div>
     <div class="row">
-        <form action="/professores" method="POST">
+        <form th:object="${requisicaoNovoProfessor}" action="/professores" method="POST">
             <div class="mb-3">
                 <label class="form-label">Nome</label>
-                <input class="form-control" type="text" name="nome">
+                <input class="form-control" type="text" th:field="*{nome}">
                 <div></div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Salário</label>
-                <input class="form-control" type="text" name="salario">
+                <input class="form-control" type="text" th:field="*{salario}">
                 <div></div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Status</label>
-                <select class="form-select" name="statusProfessor">
+                <select class="form-select" th:field="*{statusProfessor}">
                     <!--<option value="ATIVO">ATIVO</option>
                     <option value="ATIVO">INATIVO</option>
                     <option value="ATIVO">APOSENTADO</option>
                     <option value="ATIVO">AFASTADO</option>-->
-                    <option th:each="status : ${statusProfessor}" th:value="${status}" th:text="${status}"></option>
+                    <option th:each="status : ${listaStatusProfessor}" th:value="${status}" th:text="${status}"></option>
                 </select>
             </div>
             <button class="btn btn-primary" type="submit">Submeter</button>

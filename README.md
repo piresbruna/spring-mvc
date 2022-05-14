@@ -10,3 +10,4 @@ Prática do framework Spring com o padrão Model-View-Controller
 - **Commit 4:** Vídeos 4;
 - **Commit 5:** Vídeos 5, 6 e 7;
 - **Commit 6:** Vídeos 8, 9 e 10;
+- **Commit 7:** Vídeos 11 e 12;
