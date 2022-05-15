@@ -29,8 +29,6 @@ public class ProfessorController {
 
     @GetMapping("/professores/new")
     public ModelAndView nnew(RequisicaoNovoProfessor requisicaoNovoProfessor){
-        //Originalmente nos vídeos o objeto requisicaoNovoProfessor não é passado como parâmetro
-        //Contudo, sem isso há erros na geração do template da página professores/new
         ModelAndView mv = new ModelAndView("professores/new");
         mv.addObject("listaStatusProfessor", StatusProfessor.values());
         return mv;
