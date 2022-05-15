@@ -3,15 +3,13 @@ package br.com.xavecoding.regescweb.dto;
 import br.com.xavecoding.regescweb.models.Professor;
 import br.com.xavecoding.regescweb.models.StatusProfessor;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 //Classe DTO - Data Transfer Object
-public class RequisicaoNovoProfessor {
+public class RequisicaoFormProfessor {
     @NotBlank
     @NotNull
     private String nome;
@@ -51,9 +49,24 @@ public class RequisicaoNovoProfessor {
         professor.setStatusProfessor(this.statusProfessor);
         return professor;
     }
+
+    public Professor toProfessor(Professor professor){
+        professor.setNome(this.nome);
+        professor.setSalario(this.salario);
+        professor.setStatusProfessor(this.statusProfessor);
+
+        return professor;
+    }
+
+    public void fromProfessor(Professor professor){
+        this.nome = professor.getNome();
+        this.salario = professor.getSalario();
+        this.statusProfessor = professor.getStatusProfessor();
+    }
+
     @Override
     public String toString() {
-        return "RequisicaoNovoProfessor{" +
+        return "RequisicaoFormProfessor{" +
                 "nome='" + nome + '\'' +
                 ", salario=" + salario +
                 ", statusProfessor=" + statusProfessor +
