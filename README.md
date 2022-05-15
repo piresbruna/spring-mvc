@@ -13,3 +13,4 @@ Prática do framework Spring com o padrão Model-View-Controller
 - **Commit 7:** Vídeos 11, 12 e 15;
 	- No vídeo 15 é corrigido um erro, o qual já foi resolvido neste commit anteriomente;
 - **Commit 8:** Vídeos 13 e 14;
+- **Commit 9:** Vídeos 16 e 17;
